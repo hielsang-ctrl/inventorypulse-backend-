@@ -9,7 +9,7 @@ from app.schemas.user import LoginRequest, Token
 from app.config import settings
 
 router = APIRouter(prefix="/auth", tags=["auth"])
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto",bcryt__rounds=12)
 
 
 def create_access_token(data: dict) -> str:

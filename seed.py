@@ -8,7 +8,7 @@ from app.models.category import Category
 from app.models.supplier import Supplier
 from passlib.context import CryptContext
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto"[:72])
 
 db = SessionLocal()
 
